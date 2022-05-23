@@ -9,9 +9,9 @@ namespace bytebank
     public class Cliente
     {
 
-        public string cpf;
-        public string nome;
-        public string profissao;
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public string Profissao { get; set; }
 
     }
 }

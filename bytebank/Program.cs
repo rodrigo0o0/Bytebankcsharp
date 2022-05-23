@@ -1,5 +1,5 @@
-﻿
-using bytebank;
+﻿using bytebank;
+using bytebank.Titular;
 
 Console.WriteLine("Boas Vindas ao seu banco, ByteBank!\n");
 
@@ -24,19 +24,27 @@ Console.WriteLine("Boas Vindas ao seu banco, ByteBank!\n");
 //Console.WriteLine("Saldo da Amanda pós-transferência: " + conta2.saldo);
 //Console.WriteLine("Saldo do André  pós- Transferência: " + conta1.saldo);
 
-ContaCorrente conta3 = new ContaCorrente();
-conta3.titular = new Cliente();
-conta3.titular.nome = "André Silva";
-conta3.titular.profissao = "Programador C#";
-conta3.numero_agencia = 35;
-conta3.nome_agencia = "Agência Central";
-conta3.saldo = 100;
+//ContaCorrente conta3 = new ContaCorrente();
+//conta3.titular = new Cliente();
+//conta3.titular.nome = "André Silva";
+//conta3.titular.profissao = "Programador C#";
+//conta3.numero_agencia = 35;
+//conta3.nome_agencia = "Agência Central";
+//conta3.saldo = 100;
 
-Console.WriteLine(conta3.titular.nome);
+//Console.WriteLine(conta3.titular.nome);
 
-if (conta3.titular == null)
-{
-    Console.WriteLine("O campo titular está nulo.");
-}
+//if (conta3.titular == null)
+//{
+//    Console.WriteLine("O campo titular está nulo.");
+//}
+
+Cliente sarah = new Cliente();
+sarah.Nome = "Sarah Silva";
+
+ContaCorrente conta4 = new ContaCorrente();
+conta4.Saldo = 100;
+conta4.Titular = sarah;
+Console.WriteLine(conta4.Saldo);
 
 Console.ReadKey();
