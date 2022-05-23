@@ -1,9 +1,7 @@
 ﻿
 using bytebank;
 
-Console.WriteLine("Boas vindas ao seu banco, ByteBank");
-
-
+Console.WriteLine("Boas Vindas ao seu banco, ByteBank!\n");
 ContaCorrente conta1 = new ContaCorrente();
 conta1.titular = "André Silva";
 conta1.conta = "110123-X";
@@ -18,8 +16,9 @@ conta2.numero_agencia = 321;
 conta2.nome_agencia = "Agência Central";
 conta2.saldo = 100;
 
-Console.WriteLine("Titular :" + conta1.titular);
-Console.WriteLine("Conta :" + conta1.conta);
-Console.WriteLine("Número Agência :" + conta1.numero_agencia);
-Console.WriteLine("Nome Agência :" + conta1.nome_agencia);
-Console.WriteLine("Saldo: " + conta1.saldo);
+Console.WriteLine("Saldo da Amanda pré-transferência: " + conta2.saldo);
+Console.WriteLine("Saldo do André  pré- Transferência: " + conta1.saldo);
+bool transferencia = conta1.Transferir(50, conta2);
+Console.WriteLine("Transferência realizada com sucesso? " + transferencia);
+Console.WriteLine("Saldo da Amanda pós-transferência: " + conta2.saldo);
+Console.WriteLine("Saldo do André  pós- Transferência: " + conta1.saldo);
